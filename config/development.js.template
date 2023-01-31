@@ -1,0 +1,16 @@
+module.exports = {
+  service: 'mail',
+  fastify: { active: true, port: 0, prefix: '/api/mailing' },
+  redis: { active: true },
+  email: { active : true, server : '', port: 587, secure : false, user : '', password: '', from :'noreply@cowellness.net', trackingURL : 'http://dev.cowellness.net/api/mailing/tracking'},
+  mongodb: {
+    active: true,
+    databases: [
+      {
+        name: 'mail',
+        db: 'mails',
+        options: {}
+      }
+    ]
+  }
+}

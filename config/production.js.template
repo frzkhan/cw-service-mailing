@@ -1,0 +1,15 @@
+module.exports = {
+  service: 'mail',
+  fastify: { active: true, prefix: '/api/mailing' },
+  rabbitmq: { active: true },
+  mongodb: {
+    active: true,
+    databases: [
+      {
+        name: 'mail',
+        db: 'mails',
+        options: {}
+      }
+    ]
+  }
+}
